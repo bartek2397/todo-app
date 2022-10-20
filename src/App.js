@@ -7,12 +7,12 @@ function App() {
   let todoLocal = JSON.parse(localStorage.getItem('todos')) || [];
 
   const saveLocalTodos = () => {
-    if (todos.length > 0) { 
+    if (todos.length < 0) { 
 
-      localStorage.setItem('todos',JSON.stringify(todos)) 
+      localStorage.setItem('todos',JSON.stringify([])) 
 
     } else {
-      localStorage.setItem('todos', JSON.stringify([]))
+      localStorage.setItem('todos',JSON.stringify(todos)) 
     };
   }
   const getLocalTodos = () => {
