@@ -11,6 +11,8 @@ function App() {
 
       localStorage.setItem('todos',JSON.stringify(todos)) 
 
+    } else {
+      localStorage.setItem('todos', JSON.stringify([]))
     };
   }
   const getLocalTodos = () => {
